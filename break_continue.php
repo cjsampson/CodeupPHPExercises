@@ -7,3 +7,11 @@ for($i = 1; $i <= 100; $i++) {
 	continue;
 }
 
+// Create another for loop that counts from 1 to 100, but stops after 10 using break
+
+for($n = 1; $n <= 100; $n++) {
+	echo $n . "\n";
+	if($n == 10) {
+		break;
+	}
+}
