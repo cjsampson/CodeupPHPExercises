@@ -2,12 +2,15 @@
 
 
 fwrite(STDOUT, "Pick a starting number: \n");
-$userStartNum = fgets(STDIN);
+$userStartNum = (int)fgets(STDIN);
 
 fwrite(STDOUT, "Pick a ending number: \n");
-$userEndNum = fgets(STDIN);
+$userEndNum = (int)fgets(STDIN);
 
-for($i = $userStartNum; $i < is_numeric($userEndNum - $userStartNum); $i++) {
+fwrite(STDOUT, "Please choose an incrementing number: \n");
+$userIncremnetNum = (int)fgets(STDIN);
+
+for($i = $userStartNum; $i < ($userEndNum - $userStartNum); $i+=($userIncrementNum)) {
 	fwrite(STDOUT, $i);
 }
 

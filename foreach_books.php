@@ -39,5 +39,34 @@ $books = [
 		"published" => 2015,
 		"author"	=> "Marjin Haverbeke",
 		"pages" 	=> 451
+	],
+
+	"Don Quixote" => [
+		"published" => 1605,
+		"author"	=> "Miguel de Cervantes",
+		"pages"		=> 928
 	]
 ];
+
+// Construct a loop that iterates through each book and then each book's keys and values. Have it output the book's title, then list the key value pairs for the data about each book.
+
+foreach($books as $title => $book) {
+	echo "{$title}:\n";
+	foreach($book as $key => $value) {
+		echo "\t$key - $value \n";
+		// echo $title . " was $key['published'] in " . $value . "." ."\n";
+		// echo 		 "The $key[author] is $value\n";
+		// echo 		 "There are " . $key['pages'] . " in $book\n\n";
+	}
+}
+
+// Update your loop to only show books that were written after 1950.
+
+foreach($books as $title => $book) {
+	if($book['published'] > 1950) {
+		echo "{$title}:\n";
+		foreach($book as $key => $value) {
+			echo "\t$key - $value \n";
+		}
+	}
+}
