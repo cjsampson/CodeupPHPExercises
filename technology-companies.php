@@ -45,9 +45,17 @@ $companies = [
     ]
 ];
 
-// Add code to output the $companies array in its current form.
-print_r($companies);
+// // Add code to output the $companies array in its current form.
+// print_r($companies);
 
-// Sort the $companies array by company name and output the results.
-ksort($companies);
-print_r($companies);
+// // Sort the $companies array by company name and output the results.
+// ksort($companies);
+// print_r($companies);
+
+// Sort the people in each company alphabetically. You will need to use a foreach loop and will need to reassign each inner array after sorting. Output the result.
+
+foreach($companies as $company => $name) {
+    ksort($companies);
+    asort($name);
+    print_r($companies);
+}
