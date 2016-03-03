@@ -15,3 +15,14 @@ function findNameInArray($inputString, $arr) {
 	}
 }
 
+// Create a function to compare 2 arrays that returns the number of values in common between the arrays. Use the 2 example arrays and make sure your solution uses array_search()
+
+function similiarValues($arr1, $arr2) {
+	$count = 0;
+	foreach($arr1 as $value) {
+		if(findNameInArray($value, $arr2)) {
+			$count++;
+		}
+	}
+	return $count;
+}
