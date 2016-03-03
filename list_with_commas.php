@@ -19,7 +19,10 @@ echo $fullString;
 
 // Turn your solution into a function named humanizedList(). You should be able to pass the $physicistsArray as the only parameter, and your function will return the result.
 
+// Update your code to list the physicists by first name, in alphabetical order.
+
 function humanizedString($originalArray) {
+	sort($originalArray);
 	$lastItemOfOriginal = array_pop($originalArray);
 	return implode(", ", $originalArray) . " and " . $lastItemOfOriginal . ".";
 }
