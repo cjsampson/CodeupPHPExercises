@@ -17,7 +17,14 @@ $fullString = $physicistsString . " and " . $tony . ".";
 
 echo $fullString;
 
-function humanizedString($original) {
-	
+// Turn your solution into a function named humanizedList(). You should be able to pass the $physicistsArray as the only parameter, and your function will return the result.
+
+function humanizedString($originalArray) {
+	$lastItemOfOriginal = array_pop($originalArray);
+	return implode(", ", $originalArray) . " and " . $lastItemOfOriginal . ".";
 }
+
+echo humanizedString($physicistsArray);
+
+
 
