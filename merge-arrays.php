@@ -63,10 +63,10 @@ function combineArrays($arr1, $arr2){
 	$new_array = [];
 	foreach($arr1 as $index => $value) {
 		if($value === $arr2[$index]) {
-			array_push($new_array, $value);
+			$new_array[$value];
 		} elseif($value !== $arr2[$index]) {
-			array_push($new_array, $value);
-			array_push($new_array, $arr2[$index]);
+			$new_array[$value];
+			$new_array[$index];
 		}
 	}
 	return $new_array;

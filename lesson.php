@@ -48,3 +48,7 @@ function add($a = 10, $b =15) {
 // echo add()		  . PHP_EOL;
 
 echo add("Ryan", 22) . PHP_EOL;
+$filename = 'cities.txt';
+if(file_exists($filname)) {
+	$handle = fopen($filname, 'r');
+}

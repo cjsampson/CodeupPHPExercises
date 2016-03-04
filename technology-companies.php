@@ -48,21 +48,30 @@ $companies = [
 // Add code to output the $companies array in its current form.
 print_r($companies);
 
-// Sort the $companies array by company name and output the results.
-ksort($companies);
-print_r($companies);
+// // Sort the $companies array by company name and output the results.
+// ksort($companies);
+// print_r($companies);
 
-Sort the people in each company alphabetically. You will need to use a foreach loop and will need to reassign each inner array after sorting. Output the result.
+// Sort the people in each company alphabetically. You will need to use a foreach loop and will need to reassign each inner array after sorting. Output the result.
 
 foreach($companies as $company => $name) {
     ksort($companies);
+    $companies[$company] = $name;
     asort($name);
-    print_r($companies);
+    $companies[$company] = $name;
 }
+    print_r($companies);
 
 // Sort the companies from "biggest" to "smallest". This may be easier than you think, but be sure you don't loose the company names!
 
-arsort($companies);
-print_r($companies);
+// arsort($companies);
+// print_r($companies);
 
-#hello world
+// foreach($companies => $companyName => $people) {
+//     // $people is unsorted
+//     asort($people);
+//     // $people is sorted
+
+//     // assign (over-writiing)
+//     $companies[$companyName] = $people;
+// }
