@@ -24,9 +24,22 @@ function logMessage($logLevel, $message)
     return $log;
 }
 
-logMessage("INFO", "This is an info message.");
-logMessage("ERROR", "This is an info message.");
-logMessage("SOMETHING", "Another message");
+function logError(){
+	$log = logMessage('ERROR', 'This is an error message');
+	return $log;
+}
+
+function logInfo(){
+	$log = logMessage('INFO', 'This is an info message');
+	return $log;
+}
+
+// logMessage("INFO", "This is an info message.");
+// logMessage("ERROR", "This is an info message.");
+// logMessage("SOMETHING", "Another message");
+
+logInfo();
+logError();
 	
 ?>
 
